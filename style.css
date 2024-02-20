@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+}
+
+/* Mobile */
+header {
+    text-align: center;
+    color: purple;
+}
+h1, h2 {
+    margin-bottom: 15px;
+}
+main {
+    margin-bottom: 30px;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+}
+nav .btn {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+section {
+    height: 400px;
+    width: 95%;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+section #inbox {
+    height: inherit;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section #inbox li {
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+    height: 35px;
+}
+input[type="color"] {
+    width: 40%;
+}
+input[type="text"], 
+textarea {
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 40%;
+}
+textarea {
+    resize: none;;
+}
+textarea::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type="submit"] {
+    background-color: purple;
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+img {
+    width: 30px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.notificationBox {
+    border: 2px solid purple;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-style: italic;
+}
+nav .activeRoom {
+    background-color: rgb(53, 1, 53);
+}
+.userMessage { 
+    align-self: flex-end;
+    background-color: rgb(187, 128, 187);
+    color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.otherMessage {
+    align-self: flex-start;
+    background-color: rgb(245, 214, 239);
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Tablet */
+@media only screen and (min-width: 501px) {
+    main {
+        display: flex;
+    }
+    nav {
+        width: 35%;
+        flex-direction: column;
+    }
+    form {
+        text-align: right;
+    }
+    input[type="text"],
+    input[type="color"],
+    textarea {
+        width: 45%;
+    }
+    input[type="submit"] {
+        width: 150px;
+        cursor: pointer;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+    main {
+        display: block;
+    }
+    nav {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    nav .btn {
+        width: 25%; 
+        cursor: pointer;
+    }
+    nav .btn:hover {
+        background-color: rgb(53, 1, 53);
+    }
+    section {
+        width: 70%;
+    }
+    form {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="color"],
+    textarea {
+        width: 35%;
+    }
+}
