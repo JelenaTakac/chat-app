@@ -19,9 +19,6 @@ export class Chatroom {
         } else {
             alert("Korisnicko ime je nevalidno")
         }
-        // if (this.unsub) {
-        //     this.unsub();
-        // }
     }
 
     get room() {
