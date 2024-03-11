@@ -86,7 +86,7 @@ export class ChatUI {
                     .where("message", "==", document.message)
                     .get();
                     querySnapshot.forEach(async (doc) => {
-                    await doc.ref.delete(); // ref - predstavlja referencu na dokument u bazi
+                    await doc.ref.delete(); 
                     console.log("Document successfully deleted from Firestore!");
                 });
                 } catch (error) {
